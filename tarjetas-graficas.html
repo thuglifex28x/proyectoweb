@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas Gráficas - TECHPEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tarjetas Gráficas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><button onclick="showCart()">Ver Carrito</button></li> <!-- Botón para ver el carrito -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Productos Disponibles</h2>
+        <ul>
+            <li>Tarjeta Gráfica NVIDIA RTX 3080 <button onclick="addToCart('Tarjeta Gráfica NVIDIA RTX 3080')">Añadir al carrito</button></li>
+            <li>Tarjeta Gráfica AMD Radeon RX 6800 <button onclick="addToCart('Tarjeta Gráfica AMD Radeon RX 6800')">Añadir al carrito</button></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TECHPEC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

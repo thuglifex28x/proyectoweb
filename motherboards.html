@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motherboards - TECHPEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Motherboards</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><button onclick="showCart()">Ver Carrito</button></li> <!-- Botón para ver el carrito -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Productos Disponibles</h2>
+        <ul>
+            <li>Motherboard ASUS ROG <button onclick="addToCart('Motherboard ASUS ROG')">Añadir al carrito</button></li>
+            <li>Motherboard MSI B450 <button onclick="addToCart('Motherboard MSI B450')">Añadir al carrito</button></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TECHPEC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

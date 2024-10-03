@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - TECHPEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart">
+        <h2>Artículos en el Carrito</h2>
+        <pre id="cart-details"></pre>
+        <h3>Total a Pagar: $<span id="total-price">0</span></h3>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TECHPEC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        // Mostrar los detalles del carrito y el total al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartDetails = getCartDetails();
+            const total = getTotal();
+            const cartElement = document.getElementById('cart-details');
+            
+            if (cart.length === 0) {
+                cartElement.textContent = "Tu carrito está vacío.";
+            } else {
+                cartElement.innerHTML = cart.map((item, index) => `
+                    ${item} - $${productPrices[item]} <button onclick="removeFromCart('${item}')">Eliminar</button>
+                `).join('<br>');
+            }
+            
+            document.getElementById('total-price').textContent = total || 0;
+        });
+    </script>
+</body>
+</html>
+
